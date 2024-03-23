@@ -15,32 +15,26 @@ const HomePage = () => {
   }, []);
 
   return (
-    <div className="flex flex-col items-center justify-between max-w-[1200px] mx-auto pt-20">
-      <section id="home" className='flex flex-col lg:flex-row items-center'>
-        <img src="/logo-avatar.gif" alt="Logo-avatar" className='lg:w-5/12 w-full'/>
+    <div className="flex flex-col items-center justify-between pt-20">
+      <section id="home" className='flex flex-col lg:flex-row items-center max-w-[1200px] mx-auto'>
+        <img src="/logo-avatar.gif" alt="Logo-avatar" className='lg:w-5/12 w-full' />
         <div className='py-6 -rotate-3'>
           <p className=' font-[title] text-4xl font-extrabold'>
             the most based base baser on base
           </p>
-          <img src="/logo.webp" alt="Logo" className='w-full'/>
-          <div className='flex flex-row justify-center px-16'>
-            <Image src="/tg-dynamic.gif" alt='tg-dynamic' width="200" height="60" />
-            <Image src="/buy-now-dynamic.gif" alt='tg-dynamic' width="200" height="60" />
-          </div>
+          <img src="/logo.webp" alt="Logo" className='w-full' />
         </div>
       </section>
-      <section id="about" className='my-64'>
-        <h1>Section 2</h1>
-        <p>This is the content of section 2.</p>
-      </section >
-      <section id="tokenomics" className='my-64'>
-        <h1>Section 3</h1>
-        <p>This is the content of section 3.</p>
+      <section className='relative mt-[70px] text-center w-full bg-[#A6C2FA] flex-cols pt-10'>
+        <h2 className='font-[title] text-[55px] font-bold [text-shadow:-4px_6px_0px_#000000]'>TOKENOMICS</h2>
+        <img className='w-full !z-[1000]' src='/tokenomics.png'/>
       </section>
-      <section id="buy" className='my-64'>
-        <h1>Section 4</h1>
-        <p>This is the content of section 3.</p>
+
+      <section className='p-10 border-4 rounded-2xl'>
+
       </section>
+
+
     </div>
   );
 };
