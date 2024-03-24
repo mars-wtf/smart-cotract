@@ -66,3 +66,7 @@ body {
   background-color: #c6c6d8;
   border-radius: 4px;
 }
+
+.apexcharts-canvas{
+  width: 100%!important;
+}
