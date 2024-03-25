@@ -11,6 +11,7 @@ const config: Config = {
       fontFamily: {
         title: ["var(--font-title)"],
         text: ["var(--font-text)"],
+        ugly: ["var(--font-ugly)"],
       },
       backgroundImage: {
         "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",

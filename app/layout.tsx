@@ -14,7 +14,6 @@ const titleFont = localFont({
   ],
   variable: "--font-title",
 });
-
 const textFont = localFont({
   src: [
     {
@@ -23,18 +22,20 @@ const textFont = localFont({
   ],
   variable: "--font-text",
 });
+const uglyFont = localFont({
+  src: [
+    {
+      path: "../public/fonts/ugly.woff2",
+    },
+  ],
+  variable: "--font-ugly",
+});
  
 
 
 
 // import fontGilroyBold from "@/assets/fonts/title.woff2";
-
 const inter = Inter({ subsets: ["latin"] });
-
-export function PreloadResources() {
-  ReactDOM.preload('/fonts/title.woff2', { as: 'font' });
-  return null
- }
 
 export const metadata: Metadata = {
   title: "MarsWTF",
@@ -48,7 +49,7 @@ export default function RootLayout({
 }>) {
   return (
     // <html lang="en">
-    <html lang="en" suppressHydrationWarning={true} className={`${titleFont.variable} font-sans`}>
+    <html lang="en" suppressHydrationWarning={true} className={`${titleFont.variable} ${textFont.variable} ${uglyFont.variable} font-sans`}>
       {/* <Head>
         <link
           rel="preload"
