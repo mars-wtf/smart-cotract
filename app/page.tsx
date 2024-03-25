@@ -1,4 +1,6 @@
+"use client"
 import Link from 'next/link';
+import Image from 'next/image';
 
 const HomePage = () => {
   // useEffect(() => {
@@ -15,7 +17,17 @@ const HomePage = () => {
   return (
     <div className="flex flex-col items-center justify-between max-w-[1200px] mx-auto pt-20">
       <section id="home" className='flex flex-col lg:flex-row items-center'>
-        <img src="/logo-avatar.gif" alt="Logo-avatar" className='lg:w-5/12 w-full' />
+        <div className='lg:w-2/3 w-full h-full relative'>
+          <Image
+            src={'/logo-avatar.gif'}
+            // className={`${className} ${isImageLoading ? 'hidden' : 'block'}`}
+            width={0}
+            alt=''
+            height={0}
+            sizes="100vw"
+            className='w-full h-full'
+          />
+        </div>
         <div className='py-6 -rotate-3'>
           <p className='font-title text-4xl font-extrabold'>
             the most based base baser on base
@@ -28,12 +40,30 @@ const HomePage = () => {
         </div>
       </section>
 
-      <div className='flex justify-end w-full'>
-        <img src="/down-arrow1.webp" alt="arrow1" />
+      <div className='flex justify-end w-full h-full'>
+        <Image
+          src="/down-arrow1.webp"
+          // className={`${className} ${isImageLoading ? 'hidden' : 'block'}`}
+          width={0}
+          alt=''
+          height={0}
+          sizes="100vw"
+          className='w-auto'
+        />
       </div>
 
       <section id="about" className='flex items-center justify-center lg:flex-row flex-col w-full'>
-        <img src="/meme1.gif" alt="alt" className='lg:w-[45%] w-full' />
+        <div className='lg:w-[45%] w-full h-full'>
+          <Image
+            src="/meme1.gif"
+            // className={`${className} ${isImageLoading ? 'hidden' : 'block'}`}
+            width={0}
+            alt=''
+            height={0}
+            sizes="100vw"
+            className='w-auto'
+          />
+        </div>
         <div className='text-center font-title text-4xl leading-[3rem] w-full lg:w-[50%]'>
           <p>i am <span className='text-5xl text-blue-600'>bojak.</span></p>
           <p> y'know, like <span className='text-5xl text-red-600/85'>wojak.</span></p>
@@ -44,15 +74,23 @@ const HomePage = () => {
         </div>
       </section>
       <div className='flex flex-start w-full pl-40'>
-        <img src="/down-arrow2.webp" alt="down-arrow2"/>
+        <Image
+          src="/down-arrow2.webp"
+          // className={`${className} ${isImageLoading ? 'hidden' : 'block'}`}
+          width={0}
+          alt=''
+          height={0}
+          sizes="100vw"
+          className='w-auto'
+        />
       </div>
       <section className='text-center text-[#FF1C1C] font-bold font-title text-7xl py-3'>
         <p>get ready for</p>
         <p>a truly unique coin!</p>
       </section>
 
-      <section className='flex flex-col lg:flex-row gap-10 items-center justify-center'>
-        <div className='text-start font-title text-2xl w-full lg:w-[50%]'>
+      <section className='flex flex-col lg:flex-row gap-10 items-center justify-center w-full'>
+        <div className='text-start font-title text-2xl w-full lg:w-[50%] py-20'>
           <p >it's about recognizing <span className='text-3xl text-[#FA39FF]'>differences.</span></p>
           <p>it's about respecting <span className='text-3xl text-[#43D11A]'>variety.</span></p>
           <p>it's about learning how to look at the</p>
@@ -61,11 +99,29 @@ const HomePage = () => {
           <p>of circumstances.</p>
           <p>it's all about <span className='text-3xl text-[#43D11A]'>changing for the better.</span></p>
         </div>
-        <img src="/meme2.gif" alt="alt" className='lg:w-[35%] w-full' />
+        <div className='lg:w-[35%] w-full h-full'>
+          <Image
+            src="/meme2.gif"
+            // className={`${className} ${isImageLoading ? 'hidden' : 'block'}`}
+            width={0}
+            alt=''
+            height={0}
+            sizes="100vw"
+            className='w-auto'
+          />
+        </div>
       </section>
 
-      <div className='flex justify-end w-full pr-30'>
-        <img src="/down-arrow3.webp" alt="arrow1" />
+      <div className='flex justify-end w-full pr-30 min-h-40'>
+        <Image
+          src="/down-arrow3.webp"
+          // className={`${className} ${isImageLoading ? 'hidden' : 'block'}`}
+          width={0}
+          alt=''
+          height={0}
+          sizes="100vw"
+          className='w-auto'
+        />
       </div>
 
       <section className='text-center font-title -mt-24 mr-24'>
@@ -80,47 +136,137 @@ const HomePage = () => {
         </div>
       </section>
 
-      <div className='w-full justify-start'>
-        <img src="/down-arrow4.webp" alt="down-arrow4" className='ml-36' />
+      <div className='flex justify-start w-full pr-30 min-h-40'>
+        <Image
+          src="/down-arrow4.webp"
+          // className={`${className} ${isImageLoading ? 'hidden' : 'block'}`}
+          width={0}
+          alt=''
+          height={0}
+          sizes="100vw"
+          className='w-auto'
+        />
       </div>
       
-      <section id="tokenomics">
+      
+      <section id="tokenomics" className='w-full h-full'>
         <h1 className='text-center font-title text-5xl text-[#FA39FF]'>tokenomics</h1>
         <div className='flex flex-col lg:flex-row items-center'>
-          <img src="/meme3.gif" alt="Meme3" className='w-[45%]' />
-          <div className='flex flex-row w-[55%]'>
-            <img src="/tokenomics-total-supply.webp" alt="total-supply" className='w-[50%]' />
-            <img src="/tokenomics-buy-sell.webp" alt="total-supply" className='w-[50%] -ml-[10%]' />
+          <div className='lg:w-[45%] w-full h-full'>
+            <Image
+              src="/meme3.gif"
+              // className={`${className} ${isImageLoading ? 'hidden' : 'block'}`}
+              width={0}
+              alt=''
+              height={0}
+              sizes="100vw"
+              className='w-auto'
+            />
+          </div>
+          <div className='flex flex-row w-[55%] py-20'>
+            <div className='w-[50%] h-full'>
+              <Image
+                src="/tokenomics-total-supply.webp"
+                // className={`${className} ${isImageLoading ? 'hidden' : 'block'}`}
+                width={0}
+                alt=''
+                height={0}
+                sizes="100vw"
+                className='w-auto'
+              />
+            </div>
+            <div className='w-[50%] -ml-[10%]'>
+              <Image
+                src="/tokenomics-buy-sell.webp"
+                // className={`${className} ${isImageLoading ? 'hidden' : 'block'}`}
+                width={0}
+                alt=''
+                height={0}
+                sizes="100vw"
+                className='w-auto'
+              />
+            </div>
           </div>
         </div>
       </section>
 
-      <div className='flex flex-row gap-10 items-baseline justify-end w-full mr-32'>
-        <p className='font-title text-6xl text-[#43D11A] py-4'>
-          join us today!
-        </p>
-        <img src="/down-arrow3.webp" alt="down-arrow3" />
+      <div className='flex justify-end w-full pr-30 min-h-40'>
+        <Image
+          src="/down-arrow3.webp"
+          width={0}
+          alt=''
+          height={0}
+          sizes="100vw"
+          className='w-auto'
+        />
       </div>
-      <section id="buy" className='flex flex-col lg:flex-row gap-10'>
-        <img src="/logo-avatar.gif" alt="Logo-avatar" />
+
+      <p className='font-title text-6xl text-[#43D11A] py-4'>
+        join us today!
+      </p>
+      <section id="buy" className='flex flex-col lg:flex-row gap-10 w-full h-full'>
+        <div className='w-[50%] h-full'>
+          <Image
+            src="/logo-avatar.gif" 
+            width={0}
+            alt=''
+            height={0}
+            sizes="100vw"
+            className='w-auto'
+          />
+        </div>
         <div className='py-6'>
-          <img src="/logo.webp" alt="Logo" />
+          <div className='w-full min-h-40'>
+            <Image
+              src="/logo.webp" 
+              width={0}
+              alt=''
+              height={0}
+              sizes="100vw"
+              className='w-auto'
+            />
+          </div>
           <div className='flex flex-row justify-center px-16'>
             <Link href="https://t.me/Bojakportal" target="_blank" rel="noopener noreferrer" className="inline-block">
-              <img src="/tg-static.webp" alt='tg-dynamic' />
+              <div className='w-full'>
+                <Image
+                  src="/tg-static.webp" 
+                  width={0}
+                  alt=''
+                  height={0}
+                  sizes="100vw"
+                  className='w-auto'
+                />
+              </div>
             </Link>
             <Link href="https://x.com/bojakcoin" target="_blank" rel="noopener noreferrer" className="inline-block">
-              <img src="/twitter-static.webp" alt='twitter-static' />
+              <div className='w-full'>
+                <Image
+                  src="/twitter-static.webp"
+                  width={0}
+                  alt=''
+                  height={0}
+                  sizes="100vw"
+                  className='w-auto'
+                />
+              </div>
             </Link>
           </div>
 
-          <Link href="https://tracker.bubblebuybot.com/base/buy?url=https%3A%2F%2Fapp.uniswap.org%2F%23%2Fswap%3FoutputCurrency%3D0x891867D752186Fc7C3a228f33e24cb73eB4e959b%26inputCurrency%3D0x4200000000000000000000000000000000000006%26chain%3Dbase" target="_blank" rel="noopener noreferrer" className="inline-block mx-auto">
-            <img src="/buy-now-static.webp" alt='buy-now-static' className='mx-auto'/>
-          </Link>
+          <div className='w-full h-full cursor-pointer' onClick={() => window.open("https://tracker.bubblebuybot.com/base/buy?url=https%3A%2F%2Fapp.uniswap.org%2F%23%2Fswap%3FoutputCurrency%3D0x891867D752186Fc7C3a228f33e24cb73eB4e959b%26inputCurrency%3D0x4200000000000000000000000000000000000006%26chain%3Dbase", "_blank")}>
+            <Image
+              src="/buy-now-static.webp"
+              width={0}
+              alt=''
+              height={0}
+              sizes="100vw"
+              className='w-auto'
+            />
+          </div>
         </div>
       </section>
       <div className='flex flex-col items-center justify-center font-bold text-2xl py-6'>
-        <p>$BOJAK: 0x891867D752186Fc7C3a228f33e24cb73eB4e959b</p>
+        <p>$MARSWTF: 0x891867D752186Fc7C3a228f33e24cb73eB4e959b</p>
         <div className='flex flex-row justify-center items-center gap-10 py-5'>
           <Link href="https://www.dextools.io/app/en/base/pair-explorer/0x9421103043c1716211614a06ede9ce493b8eeed8?t=1710963579943" target="_blank" rel="noopener noreferrer" className="inline-block">
             <img src="/dex-tools.webp" alt="dex-tools" />
