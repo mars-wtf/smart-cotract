@@ -40,7 +40,7 @@ const HomePage = () => {
         </div>
       </section>
 
-      <div className='flex justify-end w-full h-full'>
+      <div className='flex justify-end w-full h-full min-h-20'>
         <Image
           src="/down-arrow1.webp"
           // className={`${className} ${isImageLoading ? 'hidden' : 'block'}`}
@@ -73,7 +73,7 @@ const HomePage = () => {
           <p>let's all make it <span className='text-5xl text-yellow-400'>special!</span></p>
         </div>
       </section>
-      <div className='flex flex-start w-full pl-40'>
+      <div className='flex flex-start w-full pl-40 min-h-20'>
         <Image
           src="/down-arrow2.webp"
           // className={`${className} ${isImageLoading ? 'hidden' : 'block'}`}
@@ -89,7 +89,7 @@ const HomePage = () => {
         <p>a truly unique coin!</p>
       </section>
 
-      <section className='flex flex-col lg:flex-row gap-10 items-center justify-center w-full'>
+      <section className='flex flex-col lg:flex-row gap-10 items-center justify-center w-full h-full'>
         <div className='text-start font-title text-2xl w-full lg:w-[50%] py-20'>
           <p >it's about recognizing <span className='text-3xl text-[#FA39FF]'>differences.</span></p>
           <p>it's about respecting <span className='text-3xl text-[#43D11A]'>variety.</span></p>
