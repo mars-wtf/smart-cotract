@@ -17,7 +17,7 @@ const HomePage = () => {
       <section id="home" className='flex flex-col lg:flex-row items-center'>
         <img src="/logo-avatar.gif" alt="Logo-avatar" className='lg:w-5/12 w-full' />
         <div className='py-6 -rotate-3'>
-          <p className='title text-4xl font-extrabold'>
+          <p className='font-title text-4xl font-extrabold'>
             the most based base baser on base
           </p>
           <img src="/logo.webp" alt="Logo" className='w-full' />
@@ -33,7 +33,7 @@ const HomePage = () => {
 
       <section id="about" className='-mt-[50px] flex items-center justify-center lg:flex-row flex-col w-full'>
         <img src="/meme1.gif" alt="alt" className='lg:w-[45%] w-full' />
-        <div className='text-center title text-4xl leading-[3rem] w-full lg:w-[50%]'>
+        <div className='text-center font-title text-4xl leading-[3rem] w-full lg:w-[50%]'>
           <p>i am <span className='text-5xl text-blue-600'>bojak.</span></p>
           <p> y'know, like <span className='text-5xl text-red-600/85'>wojak.</span></p>
           <p>but <span className='text-5xl text-blue-600'>based.</span> neat, huh?</p>
@@ -44,13 +44,13 @@ const HomePage = () => {
       </section>
       <section >
         <img src="/down-arrow2.webp" alt="down-arrow2" className='-mt-8 ml-36' />
-        <div className='-mt-16 text-center text-[#FF1C1C] font-bold title text-7xl py-3'>
+        <div className='-mt-16 text-center text-[#FF1C1C] font-bold font-title text-7xl py-3'>
           <p>get ready for</p>
           <p>a truly unique coin!</p>
         </div>
         <div className='flex items-center justify-center lg:flex-row flex-col w-full'>
           <div className='flex flex-col lg:flex-row gap-10 items-center justify-center'>
-            <div className='text-start title text-2xl w-full lg:w-[50%]'>
+            <div className='text-start font-title text-2xl w-full lg:w-[50%]'>
               <p >it's about recognizing <span className='text-3xl text-[#FA39FF]'>differences.</span></p>
               <p>it's about respecting <span className='text-3xl text-[#43D11A]'>variety.</span></p>
               <p>it's about learning how to look at the</p>
@@ -66,7 +66,7 @@ const HomePage = () => {
         <div className='flex justify-end w-full pr-24'>
           <img src="/down-arrow3.webp" alt="arrow1" />
         </div>
-        <div className='text-center title -mt-24 mr-24'>
+        <div className='text-center font-title -mt-24 mr-24'>
           <p className='text-5xl text-[#FF1C1C]'>it's all about building a </p>
           <p className='text-8xl text-[#43D11A]'>new culture!</p>
           <div className='text-center text-3xl'>
@@ -80,7 +80,7 @@ const HomePage = () => {
         <img src="/down-arrow4.webp" alt="down-arrow4" className='ml-36' />
       </section >
       <section id="tokenomics" className=''>
-        <h1 className='text-center title text-5xl text-[#FA39FF]'>tokenomics</h1>
+        <h1 className='text-center font-title text-5xl text-[#FA39FF]'>tokenomics</h1>
         <div className='flex flex-col lg:flex-row items-center'>
           <img src="/meme3.gif" alt="Meme3" className='w-[45%]' />
           <div className='flex flex-row w-[55%]'>
@@ -90,7 +90,7 @@ const HomePage = () => {
         </div>
       </section>
       <div className='-mt-28 flex flex-row gap-10 items-baseline justify-end w-full mr-32'>
-        <p className='title text-6xl text-[#43D11A] py-4'>
+        <p className='font-title text-6xl text-[#43D11A] py-4'>
           join us today!
         </p>
         <img src="/down-arrow3.webp" alt="down-arrow3" />

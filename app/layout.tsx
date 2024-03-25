@@ -2,12 +2,39 @@ import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import localFont from 'next/font/local';
 import Head from "next/head";
-import "./globals.css";
 import Navbar from "@/components/Navbar";
+import ReactDOM from 'react-dom'
+import "./globals.css";
+
+const titleFont = localFont({
+  src: [
+    {
+      path: "../public/fonts/title.woff2",
+    },
+  ],
+  variable: "--font-title",
+});
+
+const textFont = localFont({
+  src: [
+    {
+      path: "../public/fonts/text.woff2",
+    },
+  ],
+  variable: "--font-text",
+});
+ 
+
+
 
 // import fontGilroyBold from "@/assets/fonts/title.woff2";
 
 const inter = Inter({ subsets: ["latin"] });
+
+export function PreloadResources() {
+  ReactDOM.preload('/fonts/title.woff2', { as: 'font' });
+  return null
+ }
 
 export const metadata: Metadata = {
   title: "MarsWTF",
@@ -21,8 +48,8 @@ export default function RootLayout({
 }>) {
   return (
     // <html lang="en">
-    <html lang="en" className={inter.className} suppressHydrationWarning={true}>
-      <Head>
+    <html lang="en" suppressHydrationWarning={true} className={`${titleFont.variable} font-sans`}>
+      {/* <Head>
         <link
           rel="preload"
           href="/fonts/text.woff2"
@@ -44,7 +71,7 @@ export default function RootLayout({
           type="font/woff2"
           crossOrigin="anonymous"
         />
-      </Head>
+      </Head> */}
       <body lang="en" suppressHydrationWarning={true}>
         <main className="bg-white">
           {children}
