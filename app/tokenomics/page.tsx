@@ -2,20 +2,21 @@
 import React from 'react';
 import Image from 'next/image';
 import dynamic from 'next/dynamic';
-const ReactApexChart = dynamic(() => import("react-apexcharts"), { ssr: false });
+import ReactApexChart from 'react-apexcharts';
+// const ReactApexChart = dynamic(() => import("react-apexcharts"), { ssr: false });
 import axios from 'axios';
 
 const chart = {
           
   series: [44, 55, 41, 17, 15,15,15,20],
   options: {
-    chart: {
-      events: {
-        mounted: (chart: any) => {
-          chart.windowResizeHandler();
-        }
-      }
-    },
+    // chart: {
+    //   events: {
+    //     mounted: (chart: any) => {
+    //       chart.windowResizeHandler();
+    //     }
+    //   }
+    // },
     plotOptions: {
       pie: {
         startAngle: -90,
@@ -86,12 +87,12 @@ const HomePage = () => {
   const [holders, setHolders] = React.useState<IHolder[]>([]);
 
   const _renderHolder = ({ num, address, price }: { num: number, address: string, price: string }) => (
-    <div className='bg-white flex mt-3 w-full px-10 py-3 border-2 rounded-full border-black' style={{ boxShadow: '-5px 5px 0px black' }}>
+    <div key={num} className='bg-white flex mt-3 w-full px-10 py-3 border-2 rounded-full border-black' style={{ boxShadow: '-5px 5px 0px black' }}>
       <div className='font-[title] w-1/5 text-2xl text-center'>{num}.</div>
       <div className='font-[title] w-3/5 text-2xl overflow-hidden text-ellipsis'>{address}</div>
       <div className='font-[title] w-1/5 text-2xl'>{price} ETH</div>
     </div>
-  )
+  );
 
   return (
     <div className="flex flex-col items-center justify-between pt-20">
@@ -111,7 +112,7 @@ const HomePage = () => {
 
       <section className='p-10 mt-10 w-full items-center border-2 border-black border-l-[5px] border-b-[5px] grid lg:grid-cols-2 rounded-2xl max-w-[1200px] mx-auto'>
         <div className='relative'>
-          <ReactApexChart options={chart.options} series={chart.series} type="pie" />
+          <ReactApexChart options={chart.options} series={[44, 55, 41, 17, 15,15,15,20]} type="pie" />
           <img className='absolute w-20 h-20 left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2' src='/logo.png'/>
         </div>
         <div className='px-5 text-center'>
@@ -122,7 +123,7 @@ const HomePage = () => {
 
           {
             holders.slice(0, 10).map((item: IHolder, index: number) => (
-              <div className='flex w-full items-center gap-2'>
+              <div key={index} className='flex w-full items-center gap-2'>
                 <span className='w-5 h-5 aspect-square rounded-full bg-orange-300'></span>
                 <p className='font-[text] text-2xl overflow-hidden text-ellipsis'>{item.contributor}</p>
               </div>

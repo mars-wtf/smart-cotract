@@ -19,7 +19,7 @@ export default function RootLayout({
 }>) {
   return (
     // <html lang="en">
-    <html lang="en" className={inter.className} >
+    <html lang="en" className={inter.className} suppressHydrationWarning={true}>
       <Head>
         <link
           rel="preload"
@@ -43,7 +43,7 @@ export default function RootLayout({
           crossOrigin="anonymous"
         />
       </Head>
-      <body>
+      <body lang="en" suppressHydrationWarning={true}>
         <main className="bg-white">
           {children}
         </main>
