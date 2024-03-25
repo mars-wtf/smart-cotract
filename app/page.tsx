@@ -1,7 +1,4 @@
-"use client"
-import { useEffect } from 'react';
 import Link from 'next/link';
-import config from '../tailwind.config';
 
 const HomePage = () => {
   // useEffect(() => {
