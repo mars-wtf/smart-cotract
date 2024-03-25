@@ -27,11 +27,12 @@ const HomePage = () => {
           </div>
         </div>
       </section>
+
       <div className='flex justify-end w-full'>
         <img src="/down-arrow1.webp" alt="arrow1" />
       </div>
 
-      <section id="about" className='-mt-[50px] flex items-center justify-center lg:flex-row flex-col w-full'>
+      <section id="about" className='flex items-center justify-center lg:flex-row flex-col w-full'>
         <img src="/meme1.gif" alt="alt" className='lg:w-[45%] w-full' />
         <div className='text-center font-title text-4xl leading-[3rem] w-full lg:w-[50%]'>
           <p>i am <span className='text-5xl text-blue-600'>bojak.</span></p>
@@ -42,44 +43,48 @@ const HomePage = () => {
           <p>let's all make it <span className='text-5xl text-yellow-400'>special!</span></p>
         </div>
       </section>
-      <section >
-        <img src="/down-arrow2.webp" alt="down-arrow2" className='-mt-8 ml-36' />
-        <div className='-mt-16 text-center text-[#FF1C1C] font-bold font-title text-7xl py-3'>
-          <p>get ready for</p>
-          <p>a truly unique coin!</p>
-        </div>
-        <div className='flex items-center justify-center lg:flex-row flex-col w-full'>
-          <div className='flex flex-col lg:flex-row gap-10 items-center justify-center'>
-            <div className='text-start font-title text-2xl w-full lg:w-[50%]'>
-              <p >it's about recognizing <span className='text-3xl text-[#FA39FF]'>differences.</span></p>
-              <p>it's about respecting <span className='text-3xl text-[#43D11A]'>variety.</span></p>
-              <p>it's about learning how to look at the</p>
-              <p><span className='text-3xl text-[#FFB00F]'>brighter side of things</span>... always.</p>
-              <p>it's about <span className='text-3xl text-[#FF1C1C]'>finding joy</span> in the most mundane.</p>
-              <p>of circumstances.</p>
-              <p>it's all about <span className='text-3xl text-[#43D11A]'>changing for the better.</span></p>
-            </div>
-            <img src="/meme2.gif" alt="alt" className='lg:w-[35%] w-full' />
-          </div>
+      <div className='flex flex-start w-full pl-40'>
+        <img src="/down-arrow2.webp" alt="down-arrow2"/>
+      </div>
+      <section className='text-center text-[#FF1C1C] font-bold font-title text-7xl py-3'>
+        <p>get ready for</p>
+        <p>a truly unique coin!</p>
+      </section>
 
+      <section className='flex flex-col lg:flex-row gap-10 items-center justify-center'>
+        <div className='text-start font-title text-2xl w-full lg:w-[50%]'>
+          <p >it's about recognizing <span className='text-3xl text-[#FA39FF]'>differences.</span></p>
+          <p>it's about respecting <span className='text-3xl text-[#43D11A]'>variety.</span></p>
+          <p>it's about learning how to look at the</p>
+          <p><span className='text-3xl text-[#FFB00F]'>brighter side of things</span>... always.</p>
+          <p>it's about <span className='text-3xl text-[#FF1C1C]'>finding joy</span> in the most mundane.</p>
+          <p>of circumstances.</p>
+          <p>it's all about <span className='text-3xl text-[#43D11A]'>changing for the better.</span></p>
         </div>
-        <div className='flex justify-end w-full pr-24'>
-          <img src="/down-arrow3.webp" alt="arrow1" />
+        <img src="/meme2.gif" alt="alt" className='lg:w-[35%] w-full' />
+      </section>
+
+      <div className='flex justify-end w-full pr-30'>
+        <img src="/down-arrow3.webp" alt="arrow1" />
+      </div>
+
+      <section className='text-center font-title -mt-24 mr-24'>
+        <p className='text-5xl text-[#FF1C1C]'>it's all about building a </p>
+        <p className='text-8xl text-[#43D11A]'>new culture!</p>
+        <div className='text-center text-3xl'>
+          <p>one that is distinctly ours.</p>
+          <p>one where no one gets left behind.</p>
+          <p>one where all work for a common cause.</p>
+          <p>one where we can all truly belong.</p>
+          <p><span className='text-5xl text-[#FFB00F] font-bold'>becoz we are based AF!</span></p>
         </div>
-        <div className='text-center font-title -mt-24 mr-24'>
-          <p className='text-5xl text-[#FF1C1C]'>it's all about building a </p>
-          <p className='text-8xl text-[#43D11A]'>new culture!</p>
-          <div className='text-center text-3xl'>
-            <p>one that is distinctly ours.</p>
-            <p>one where no one gets left behind.</p>
-            <p>one where all work for a common cause.</p>
-            <p>one where we can all truly belong.</p>
-            <p><span className='text-5xl text-[#FFB00F] font-bold'>becoz we are based AF!</span></p>
-          </div>
-        </div>
+      </section>
+
+      <div className='w-full justify-start'>
         <img src="/down-arrow4.webp" alt="down-arrow4" className='ml-36' />
-      </section >
-      <section id="tokenomics" className=''>
+      </div>
+      
+      <section id="tokenomics">
         <h1 className='text-center font-title text-5xl text-[#FA39FF]'>tokenomics</h1>
         <div className='flex flex-col lg:flex-row items-center'>
           <img src="/meme3.gif" alt="Meme3" className='w-[45%]' />
@@ -89,7 +94,8 @@ const HomePage = () => {
           </div>
         </div>
       </section>
-      <div className='-mt-28 flex flex-row gap-10 items-baseline justify-end w-full mr-32'>
+
+      <div className='flex flex-row gap-10 items-baseline justify-end w-full mr-32'>
         <p className='font-title text-6xl text-[#43D11A] py-4'>
           join us today!
         </p>
