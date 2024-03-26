@@ -5,6 +5,8 @@ import Head from "next/head";
 import Navbar from "@/components/Navbar";
 import ReactDOM from 'react-dom'
 import "./globals.css";
+import "@rainbow-me/rainbowkit/styles.css";
+import { Providers } from '@/providers';
 
 const titleFont = localFont({
   src: [
@@ -75,9 +77,11 @@ export default function RootLayout({
       </Head> */}
       <body lang="en" suppressHydrationWarning={true}>
         <main className="bg-white">
-          {children}
+          <Providers>
+            {children}
+          </Providers>
         </main>
-        <footer className="py-3 mt-24 text-center text-slate-500 text-2xl font-[title]">Copyright 2024</footer>
+        <footer className="py-3 text-center text-slate-500 text-2xl font-[title]">Copyright 2024</footer>
       </body>
     </html>
   );

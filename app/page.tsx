@@ -1,21 +1,27 @@
 "use client"
+import React from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
 
+import { useRouter } from 'next/navigation';
+
 const HomePage = () => {
-  // useEffect(() => {
-  //   const url = window.location.href;
-  //   if (url.includes('#')) {
-  //     const id = url.split('#')[1];
-  //     const element = document.getElementById(id);
-  //     if (element) {
-  //       element.scrollIntoView({ behavior: 'smooth' });
-  //     }
-  //   }
-  // }, []);
+
+  const router = useRouter ();
+  React.useEffect(() => {
+    const url = window.location.href;
+    if (url.includes('#')) {
+      const id = url.split('#')[1];
+      const element = document.getElementById(id);
+      if (element) {
+        element.scrollIntoView({ behavior: 'smooth' });
+      }
+    }
+  }, []);
 
   return (
     <div className="flex flex-col items-center justify-between max-w-[1200px] mx-auto pt-20">
+      <img onClick={() => router.push('/presale')} src='/presale.png' className='fixed right-10 top-10 w-48 cursor-pointer hover:scale-105 hover:opacity-65'></img>
       <section id="home" className='flex flex-col lg:flex-row items-center'>
         <div className='lg:w-2/3 w-full h-full relative'>
           <Image
@@ -65,8 +71,8 @@ const HomePage = () => {
           />
         </div>
         <div className='text-center font-title text-4xl leading-[3rem] w-full lg:w-[50%]'>
-          <p>i am <span className='text-5xl text-blue-600'>bojak.</span></p>
-          <p> y'know, like <span className='text-5xl text-red-600/85'>wojak.</span></p>
+          <p>here is <span className='text-5xl text-blue-600'>mars wtf.</span></p>
+          <p> y'know, like <span className='text-5xl text-red-600/85'>Mars.</span></p>
           <p>but <span className='text-5xl text-blue-600'>based.</span> neat, huh?</p>
           <p>and this token is meant</p>
           <p>to celebrate just that.</p>
