@@ -1,37 +1,13 @@
 {
-  "name": "base-meme",
-  "version": "0.1.0",
-  "private": true,
-  "scripts": {
-    "dev": "next dev",
-    "build": "next build",
-    "start": "next start",
-    "lint": "next lint"
-  },
   "dependencies": {
-    "@iconify/react": "^4.1.1",
-    "@rainbow-me/rainbowkit": "^2.0.2",
-    "antd": "^5.15.4",
-    "axios": "^1.6.8",
-    "ethers": "^5.7.2",
-    "install": "^0.13.0",
-    "next": "14.1.4",
-    "npm": "^10.5.0",
-    "pino-pretty": "^11.0.0",
-    "react": "^18",
-    "react-apexcharts": "^1.4.1",
-    "react-dom": "^18.2.0",
-    "react-toastify": "^10.0.5",
-    "viem": "^2.9.0",
-    "wagmi": "^2.5.12"
+    "dotenv": "^16.4.1",
+    "ethers": "^6.11.1",
+    "hardhat": "^2.19.5"
   },
   "devDependencies": {
-    "@types/node": "^20",
-    "@types/react": "^18",
-    "@types/react-dom": "^18",
-    "autoprefixer": "^10.0.1",
-    "postcss": "^8",
-    "tailwindcss": "^3.3.0",
-    "typescript": "^5"
+    "@nomicfoundation/hardhat-toolbox": "^4.0.0",
+    "@nomicfoundation/hardhat-verify": "^2.0.4",
+    "@openzeppelin/contracts": "^4.4.1",
+    "@xtools-at/hardhat-sourcify": "^0.2.0"
   }
 }

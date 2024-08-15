@@ -1,0 +1,19 @@
+1. Install node moudules using "npm install --save"
+2. Compile contracts using "npx hardhat compile"
+3. deploy first marsWTF contract "npx hardhat run .\scripts\depoly.marsWTF.ts --network base"
+After that, from the movie, set the base USDC address.
+4. deploy second marsVault contract "npx hardhat run .\scripts\deploy.marsVault.ts --network base"
+5. set the USDC address, vault address and deploy earlyLiquidity contract.
+npx hardhat run .\scripts\deploy.earlyLP.ts --network base
+
+
+/argumenst/vault.ts
+
+export default [
+  [
+    "0xC80e9598cC9B3474Ac55888b01521a1E206385da", // this is multi signature wallet's manager
+    "0xE67786ec0B2116698D813a9EC1313437A7cBC438", // this is second multi-signature-wallet's manager
+  ],
+  "0x833589fCD6eDb6E08f4c7C32D4f71b54bdA02913", //USDC address
+  3, // this is confirmation numbers to output USDC
+];
